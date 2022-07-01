@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+        Author: Kevin Lamanna 301224451
+
+        Filename: assignment1.html
+     -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basal Metabolic Rate (BMR) Calculator</title>
+    <link rel="stylesheet" href="styles.css"></link>
+    <script src="scripts.js" defer></script>   
+</head>
+
+<body>
+<div class="container">
+
+<div class="title">
+    <h2>Enter Your Physical Specifications</h2>
+</div>
+
+<form method="post" action="#" name = "bmrForm">
+    
+<div class="flexContainer">
+    <div id="gender">
+    <h4>Enter Your Gender</h4>
+    <input type="radio" name = "gender" id="male" value="male">
+    <label for="male">Male</label>
+    
+    <input type="radio" name = "gender" id="female" value="female">
+    <label for="female">Female</label>
+    </div>
+
+    <br>
+    
+    <div id = "ageBlock">
+    <h4>Enter Your Age:</h4>
+    <div class="input-box">
+    <label for="age">Age (years)</label>
+    <input type="number" id="age" min = 1 max = 100 placeholder=" ~ years old">
+    </div>
+    </div>
+</div>
+    
+<div class="flexContainer">
+    <div id="weightUnits">
+    <h4>Select Your Units:</h4>
+
+    <input type="radio" name = "weightUnits" id="lbs" value="lbs">
+    <label for="lbs">lbs</label>
+    
+    <input type="radio" name = "weightUnits" id="kg" value="kg">
+    <label for="kg">kg</label>
+    </div>
+
+    <div id="weightBlock">
+    <h4>Enter Your Weight:</h4>
+    <div class="input-box">
+    <label for="weight">Weight (lbs/kg)</label>
+    <input type="number" id="weight" min = 1 max = 300 placeholder=" ~ lbs/kg">
+    </div>
+    </div>
+</div>
+
+<div class="flexContainer">
+    <div id="heightUnits">
+    <h4>Select Your Units:</h4>
+            
+    <input type="radio" name = "heightUnits" id="inches" value="inches">
+    <label for="inches">inches</label>
+
+    <input type="radio" name = "heightUnits" id="cm" value="cm">
+    <label for="cm">cm</label>
+    </div>
+
+    <div id="heightBlock">
+    <h4>Enter Your Height:</h4>
+    <div class="input-box">
+    <label for="height"> Height (inches/cm)</label>
+    <input type="number" id="height" min = 1 max = 300 placeholder=" ~ inches/cm">
+    </div>
+    </div>
+</div>
+
+    <div id="activityBlock">
+    <h4>Select Your Activity Level</h4>
+            
+    <select name="activity" id="activity">
+        <option value="light">Light activity (exercise 1 - 3 times per week)</option>
+        <option value="moderate">Moderate activity (exercise 3 - 5 times per week)</option>
+        <option value="high">High activity (exercise everyday)</option>
+        <option value="extreme">Extreme activity (professional athlete)</option>
+    </select>
+    </div>
+
+    <br>
+
+    <div class="buttons">
+        <input type="submit" id="submit" value="Calculate" onClick="calculateBMR();" id="calc">
+        <br><br>
+        <input type="reset" id="reset" value="Reset">
+    </div>  
+
+<br>
+
+</form>
+<footer>
+    <p>&copy;Kevin Lamanna - Client Side Web Programming - Summer 2022</p>
+</footer>
+</div>
+
+</body>
+</html>
